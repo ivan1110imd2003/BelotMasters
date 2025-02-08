@@ -1,0 +1,328 @@
+/* reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* basics */
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #000;
+    color: #333;
+    font-size: 1.6rem;
+    line-height: 1.2;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* grid */
+
+.grid {
+    display: flex;
+}
+
+.grid .grid__col {
+    
+}
+
+.grid .grid__col--1of2 {
+    flex: 0 0 calc(100% / 2);
+}
+
+/* section */
+
+.section {
+    position: relative;
+    background-color: #5c10cd6f;
+    height: 100vh;
+}
+
+.section .section__bg {
+    background-image: url("../images/suits_bg.png");
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background-size: 10%;
+    opacity: 0.05;
+}
+
+.section .section__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.section h1 {
+    color: #ffbf00;
+    font-size: 4rem;
+    letter-spacing: -0.04em;
+}
+
+.section .section__actions {
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.section .section__input {
+    width: 20rem;
+    margin: 0 auto;
+}
+
+.section .section__input input {
+    font-weight: 700;
+}
+
+.section .section__joinB {
+    margin-top: 1.2rem;
+}
+
+.section .section__actions p {
+    color: #fff;
+    text-decoration: underline;
+    margin-top: 0.8rem;
+    cursor: pointer;
+}
+
+.section .section__join {
+    display: none;
+}
+
+.section .section__btn {
+    font-size: 1.6rem;
+    background-color: transparent;
+    border: 0.2rem solid #fff;
+    padding: 1rem;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.section .section__btn + .section__btn {
+    margin-left: 1rem;
+}
+
+/*  area  */
+
+.area {
+    height: 4rem;
+    width: 100%;
+    padding: 0 1rem;
+    font-size: 2rem;
+    text-align: center;
+}
+
+/* room */
+
+.room {
+    position: relative;
+    background-color: #5c10cd6f;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.room .room__bg {
+    background-image: url("../images/suits_bg.png");
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background-size: 10%;
+    opacity: 0.05;
+}
+
+.room .room__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.room .room__head h1 {
+    color: #ffbf00;
+    font-size: 4rem;
+    letter-spacing: -0.04em;
+}
+
+.room .room__head small {
+    color: #ffbf00;
+    font-size: 2rem;
+}
+
+/* game */
+
+.game {
+    position: relative;
+    background-color: #5c10cd6f;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.game .game__bg {
+    background-image: url("../images/suits_bg.png");
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background-size: 10%;
+    opacity: 0.05;
+}
+
+.game .game__players {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    pointer-events: none;
+}
+
+.game .game__player {
+    height: 8rem;
+    width: 8rem;
+    border-radius: 1.2rem;
+    overflow: hidden;
+    background-color: #5d19c2;
+    position: absolute;
+    border: 0.3rem solid #ffbf00;
+    pointer-events: auto;
+}
+
+.game .game__player-me {
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.game .game__player-t {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.game .game__player-l {
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.game .game__player-r {
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.game .game__result {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #6e3eb6;
+    border: 0.1rem solid rgba(255, 255, 255, 0.5);
+    width: 25rem;
+}
+
+.game .game__resultH {
+    font-weight: 700;
+    color: #ffbf00;
+    font-size: 2.5rem;
+    padding: 1rem;
+    text-align: center;
+    line-height: 1;
+}
+
+.game .game__resultB p {
+    font-size: 2rem;
+    padding: 1rem;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.9);
+    border-top: 0.1rem solid rgba(255, 255, 255, 0.5);
+    line-height: 1.25;
+}
+
+.game .game__resultB .grid__col:first-child p {
+    border-right: 0.1rem solid rgba(255, 255, 255, 0.5);
+} 
+
+.game ul.cards {
+    position: absolute;
+    bottom: -10rem;
+    left: 50%;
+    transform: translateX(-50%);
+    list-style: none;
+    display: flex;
+    width: 55rem;
+}
+
+.game .cards li {
+    display: inline-block;
+    width: 5rem;
+    height: 25rem;
+    cursor: pointer;
+    position: relative;
+}
+
+.game .cards .card {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25rem;
+    width: 20rem;
+    background-color: #fff;
+    font-size: 3.5rem;
+    font-weight: 700;
+    border: 0.1rem solid #333;
+    border-radius: 1rem;
+    line-height: 1;
+    padding: 0.5rem;
+    padding-left: 0.7rem;
+    letter-spacing: -0.05em;
+    transition: transform 0.2s;
+}
+
+.game .cards .card:hover {
+    transform: translateY(-1.5rem)
+}
+
+/* cards suits */
+
+.karo, .kupa {
+    color: #df0d0d;
+}
+
+.pika, .spatiya {
+    color: #000;
+}
+
+.karo {
+
+}
+
+.kupa {
+
+}
+
+.spatiya {
+
+}
+
+.pika {
+
+}
