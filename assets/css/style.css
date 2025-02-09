@@ -74,12 +74,16 @@ a {
 
 .section .section__actions {
     justify-content: center;
-    margin-top: 1rem;
+    margin-top: 1.5rem;
 }
 
 .section .section__input {
     width: 20rem;
     margin: 0 auto;
+}
+
+.section .section__input + .section__input {
+    margin-top: 1rem;
 }
 
 .section .section__input input {
@@ -101,6 +105,10 @@ a {
     display: none;
 }
 
+.section .section__create {
+    display: none;
+}
+
 .section .section__btn {
     font-size: 1.6rem;
     background-color: transparent;
@@ -115,6 +123,63 @@ a {
 
 .section .section__btn + .section__btn {
     margin-left: 1rem;
+}
+
+.section .section__profile {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+}
+
+.section .section__btn i {
+    margin-left: 0.7rem;
+}
+
+.section .section__popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2rem 3.3rem 2rem;
+    background-color: #391969;
+    border: 0.1rem solid #ffffff40;
+    border-radius: 1rem;
+}
+
+.section .section__popupH {
+    margin-bottom: 1.2rem;
+}
+
+.section .section__popup h2 {
+    color: #ffbf00;
+    text-align: center;
+    font-size: 3rem;
+}
+
+.section .section__popup .section__input {
+    width: 27rem;
+}
+
+.section .section__login .section__actions .section__btn {
+    margin: 0 auto;
+    display: block;
+}
+
+.section .section__register .section__actions .section__btn {
+    margin: 0 auto;
+    display: block;
+}
+
+.section .section__login {
+    display: none;
+}
+
+.section .section__register {
+    display: none;
+}
+
+.section .section__popupC {
+    text-align: center;
 }
 
 /*  area  */
@@ -164,6 +229,84 @@ a {
 .room .room__head small {
     color: #ffbf00;
     font-size: 2rem;
+}
+
+.room .room__body {
+    color: #ffbf00;
+    margin-top: 3rem;
+}
+
+.room ul.room__players {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 1.5rem;
+    width: 49rem;
+    column-gap: 3rem;
+    justify-content: center;
+}
+
+.room .room__player {
+    display: flex;
+    align-items: center;
+    column-gap: 2rem;
+    flex: 0 0 22rem;
+}
+
+.room .room__playerA {
+    height: 8rem;
+    width: 8rem;
+    border-radius: 1.2rem;
+    background-color: #5d19c2;
+    border: 0.3rem solid #ffbf00;
+    pointer-events: auto;
+    position: relative;
+}
+
+.room .room__playerR {
+    position: absolute;
+    top: -0.7rem;
+    left: -0.5rem;
+    height: 2rem;
+    width: 2rem;
+    background-color: #cb1010;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.room .room__playerR:before,
+.room .room__playerR:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: #fff;
+    width: 0.2rem;
+    height: 1.2rem;
+}
+
+.room .room__playerR:before {
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.room .room__playerR:after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.room .room__actions {
+    margin-top: 3rem;
+}
+
+.room .room__btn {
+    font-size: 1.6rem;
+    background-color: transparent;
+    border: 0.2rem solid #ffbf00;
+    padding: 1rem;
+    color: #ffbf00;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    cursor: pointer;
 }
 
 /* game */

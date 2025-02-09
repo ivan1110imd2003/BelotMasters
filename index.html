@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BelotMasters</title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://kit.fontawesome.com/c0c3e05373.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
@@ -24,13 +25,68 @@
                         <button class="section__btn" id="joinGame">Влез</button>
                     </div>
 
-                    <p id="goMenu">Назад</p>
+                    <p id="goMenuJ">Назад</p>
                 </div>
 
                 <div class="section__btns">
-                    <button class="section__btn" id="createGame">Създай игра</button>
-                    <button class="section__btn" id="joinMenu">Влез в игра</button>
+                    <button class="section__btn" id="createGame">Създай игра <i class="fa-solid fa-lock"></i></button>
+
+                    <button class="section__btn" id="joinMenu">Влез в игра <i class="fa-solid fa-lock"></i></button>
                 </div>
+            </div>
+        </div>
+
+        <div class="section__profile">
+            <button class="section__btn" id="signIn">Влез в профил</button>
+
+            <button class="section__btn" id="signUp">Регистрирай се</button>
+        </div>
+
+        <div class="section__login section__popup">
+            <div class="section__popupH">
+                <h2>Влез</h2>
+            </div>
+
+            <div class="section__popupB">
+                <div class="section__input">
+                    <input type="email" class="area" name="emailL" id="emailL" placeholder="BelotMasters@mail.com">
+                </div>
+
+                <div class="section__input">
+                    <input type="password" class="area" name="passL" id="passL" placeholder="Парола за белота">
+                </div>
+            </div>
+
+            <div class="section__actions">
+                <button class="section__btn" id="login">Влез</button>
+
+                <p class="section__popupC">Назад</p>
+            </div>
+        </div>
+        
+        <div class="section__register section__popup">
+            <div class="section__popupH">
+                <h2>Регистрация</h2>
+            </div>
+
+            <div class="section__popupB">
+                <div class="section__input">
+                    <input type="email" class="area" name="emailR" id="emailR" placeholder="BelotMasters@mail.com">
+                </div>
+
+                <div class="section__input">
+                    <input type="text" class="area" name="unameR" id="unameR" placeholder="Твоя прякор">
+                </div>
+
+                <div class="section__input">
+                    <input type="password" class="area" name="passR" id="passR" placeholder="Парола за белота">
+                </div>
+            </div>
+
+            <div class="section__actions">
+                <button class="section__btn" id="register">Регистрирай се</button>
+
+                <p class="section__popupC">Назад</p>
             </div>
         </div>
     </section>
