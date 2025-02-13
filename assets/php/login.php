@@ -1,4 +1,5 @@
 <?php
+session_start();
 require 'conn.php';
 
 if(isset($_POST["login"])) {
@@ -12,7 +13,9 @@ if(isset($_POST["login"])) {
 
     if ($result->num_rows > 0) {
         while($row = $result->fetch_assoc()) {
-            echo "id: " . $row["id"]. " - Name: " . $row["uname"]. " " . $row["email"]. "<br>";
+            echo "success";
+            $_SESSION["id"] = $row["id"];
+            $_SESSION["uname"] = $row["uname"];
         }
     } else {
         echo "0 results";

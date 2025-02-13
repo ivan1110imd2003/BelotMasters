@@ -131,6 +131,13 @@ a {
     right: 2rem;
 }
 
+.section .section__logof {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    display: none;
+}
+
 .section .section__btn i {
     margin-left: 0.7rem;
 }
