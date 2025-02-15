@@ -12,8 +12,8 @@ services:
   database:
     image: "mysql:lts"
     environment:
-      - MYSQL_DATABASE: "belotmasters"
-      - MYSQL_ROOT_PASSWORD: "dev123"
+      MYSQL_DATABASE: "belotmasters"
+      MYSQL_ROOT_PASSWORD: "dev123"
     volumes:
       - ./mysql:/var/lib/mysql
     restart: always
