@@ -1,0 +1,27 @@
+version: "3"
+
+services:
+  frontend:
+    image: belotmasters/webapp
+    build: ./webapp
+    ports:
+      - "8080:80"
+    restart: always
+
+  database:
+    image: "mysql:lts"
+    environment:
+      - MYSQL_DATABASE: "belotmasters"
+      - MYSQL_ROOT_PASSWORD: "dev123"
+    volumes:
+      - ./mysql:/var/lib/mysql
+    restart: always
+
+  backend:
+    image: belotmasters/server
+    build: ./server
+    depends_on:
+      - database
+    ports:
+      - "3000:3000"
+    restart: always
